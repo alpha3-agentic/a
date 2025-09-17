@@ -1,0 +1,29 @@
+{
+  "found": true,
+  "status": 200,
+  "endpoint": "GET file/sha256",
+  "summary": {
+    "risk": null,
+    "severity": null,
+    "classification": null,
+    "matches": [
+      "fe1dd2ef1aa57806229585b55b0f395317c4631005ec2f54a6cbffea16998e42"
+    ]
+  },
+  "json": {
+    "data": {
+      "entity": {
+        "type": "file/sha256",
+        "value": "fe1dd2ef1aa57806229585b55b0f395317c4631005ec2f54a6cbffea16998e42"
+      },
+      "risk": null,
+      "enrichment": {
+        "related_entities": null,
+        "filenames": null,
+        "first_seen": null,
+        "download_urls": null
+      },
+      "benign": true
+    }
+  }
+}

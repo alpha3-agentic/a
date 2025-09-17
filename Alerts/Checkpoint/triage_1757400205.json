@@ -1,0 +1,25 @@
+{
+  "found": true,
+  "status": 200,
+  "json": {
+    "status": {
+      "code": 2001,
+      "label": "SUCCESS",
+      "message": "Succeeded to generate reputation"
+    },
+    "resource": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reputation": {
+      "classification": "Benign",
+      "confidence": "High",
+      "severity": "N/A"
+    },
+    "risk": 0,
+    "findings": {
+      "total": 57,
+      "positives": 0,
+      "file_type": "unknown",
+      "file_size": 0,
+      "first_seen": "2006-09-18 07:26:15"
+    }
+  }
+}

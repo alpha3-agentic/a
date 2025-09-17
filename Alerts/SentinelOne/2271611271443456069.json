@@ -1,0 +1,11 @@
+{
+  "alert_file": "2271611271443456069.json",
+  "hostname": "1031-MW-0019",
+  "result": {
+    "found": true,
+    "status": 200,
+    "hostname_queried": "1031-MW-0019",
+    "assets_count": 0,
+    "json": []
+  }
+}

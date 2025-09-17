@@ -1,0 +1,25 @@
+{
+  "found": true,
+  "status": 200,
+  "json": {
+    "status": {
+      "code": 2001,
+      "label": "SUCCESS",
+      "message": "Succeeded to generate reputation"
+    },
+    "resource": "4a24048f81afbe9fb62e7a6a49adbd1faf41f266b5f9feecdceb567aec096784",
+    "reputation": {
+      "classification": "Malware",
+      "confidence": "High",
+      "severity": "High"
+    },
+    "risk": 100,
+    "findings": {
+      "total": 67,
+      "positives": 47,
+      "file_type": "Office Open XML Document",
+      "file_size": 10253,
+      "first_seen": "2022-05-27 13:06:45"
+    }
+  }
+}

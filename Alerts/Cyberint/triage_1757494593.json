@@ -1,0 +1,55 @@
+{
+  "found": true,
+  "status": 200,
+  "endpoint": "GET file/sha256",
+  "summary": {
+    "risk": {
+      "malicious_score": 80,
+      "detected_activities": [
+        {
+          "type": "malware",
+          "observation_date": "2025-09-10T08:56:37.228126+00:00",
+          "description": "",
+          "confidence": 100,
+          "occurrences_count": 1,
+          "related_entities": null
+        }
+      ],
+      "occurrences_count": 1
+    },
+    "severity": null,
+    "classification": null,
+    "matches": [
+      "78cc359680e90b349cec67a4d35ef043cfa27865af7757d470148ae51237d45e"
+    ]
+  },
+  "json": {
+    "data": {
+      "entity": {
+        "type": "file/sha256",
+        "value": "78cc359680e90b349cec67a4d35ef043cfa27865af7757d470148ae51237d45e"
+      },
+      "risk": {
+        "malicious_score": 80,
+        "detected_activities": [
+          {
+            "type": "malware",
+            "observation_date": "2025-09-10T08:56:37.228126+00:00",
+            "description": "",
+            "confidence": 100,
+            "occurrences_count": 1,
+            "related_entities": null
+          }
+        ],
+        "occurrences_count": 1
+      },
+      "enrichment": {
+        "related_entities": null,
+        "filenames": null,
+        "first_seen": null,
+        "download_urls": null
+      },
+      "benign": false
+    }
+  }
+}

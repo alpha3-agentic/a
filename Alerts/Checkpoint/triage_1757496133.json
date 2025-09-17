@@ -1,0 +1,18 @@
+{
+  "found": true,
+  "status": 200,
+  "json": {
+    "status": {
+      "code": 2001,
+      "label": "SUCCESS",
+      "message": "Succeeded to generate reputation"
+    },
+    "resource": "5127684e673c9bf97c03cf42a72639d26cfc1cb49d10a2846670b29ef1240efe",
+    "reputation": {
+      "classification": "Unclassified",
+      "confidence": "N/A",
+      "severity": "N/A"
+    },
+    "risk": 34
+  }
+}

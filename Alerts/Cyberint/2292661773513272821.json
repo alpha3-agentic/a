@@ -1,0 +1,74 @@
+{
+  "found": true,
+  "status": 200,
+  "endpoint": "GET file/sha256",
+  "summary": {
+    "risk": {
+      "malicious_score": 100,
+      "detected_activities": [
+        {
+          "type": "malware",
+          "observation_date": "2025-09-17T09:59:45.372870Z",
+          "description": "",
+          "confidence": 100,
+          "occurrences_count": 1,
+          "related_entities": null
+        },
+        {
+          "type": "malware_payload",
+          "observation_date": "2025-08-30T04:56:32Z",
+          "description": "Detected in 2 source(s). Recognized as Application.Generic.3785251.",
+          "confidence": 80,
+          "occurrences_count": 2,
+          "related_entities": null
+        }
+      ],
+      "occurrences_count": 3
+    },
+    "severity": null,
+    "classification": null,
+    "matches": [
+      "dc1042d102d7f3f7215a490a322186f2e56c9ec40fbce52577b3009a5ad15ffc"
+    ]
+  },
+  "json": {
+    "data": {
+      "entity": {
+        "type": "file/sha256",
+        "value": "dc1042d102d7f3f7215a490a322186f2e56c9ec40fbce52577b3009a5ad15ffc"
+      },
+      "risk": {
+        "malicious_score": 100,
+        "detected_activities": [
+          {
+            "type": "malware",
+            "observation_date": "2025-09-17T09:59:45.372870Z",
+            "description": "",
+            "confidence": 100,
+            "occurrences_count": 1,
+            "related_entities": null
+          },
+          {
+            "type": "malware_payload",
+            "observation_date": "2025-08-30T04:56:32Z",
+            "description": "Detected in 2 source(s). Recognized as Application.Generic.3785251.",
+            "confidence": 80,
+            "occurrences_count": 2,
+            "related_entities": null
+          }
+        ],
+        "occurrences_count": 3
+      },
+      "enrichment": {
+        "related_entities": null,
+        "filenames": [
+          "/home/petik/ss/malware/2025-08-30_cd1842de7b6c4e7c17cc44e87a23c77b_black-basta_imuler_njrat_vidar_xmrig",
+          "C:\\Windows\\q8yz78yp1.exe"
+        ],
+        "first_seen": "2025-08-25T18:26:59Z",
+        "download_urls": []
+      },
+      "benign": false
+    }
+  }
+}

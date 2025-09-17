@@ -1,0 +1,32 @@
+{
+  "found": true,
+  "status": 200,
+  "json": {
+    "status": {
+      "code": 2001,
+      "label": "SUCCESS",
+      "message": "Succeeded to generate reputation"
+    },
+    "resource": "a5c2b867c95e7a072071fd4ad1cbf68bc3f3f9fba288e7b732b0bccdb02b993e",
+    "reputation": {
+      "classification": "Malware",
+      "confidence": "Medium",
+      "severity": "High"
+    },
+    "risk": 80,
+    "context": {
+      "malware_family": "Generic",
+      "protection_name": "Trojan.Win32.Generic.TC.dbe1sgQO",
+      "malware_types": [
+        "Trojan"
+      ]
+    },
+    "findings": {
+      "total": 72,
+      "positives": 14,
+      "file_type": "Win32 EXE",
+      "file_size": 124947,
+      "first_seen": "2022-04-29 05:34:15"
+    }
+  }
+}

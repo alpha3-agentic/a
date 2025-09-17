@@ -1,0 +1,37 @@
+{
+  "found": true,
+  "status": 200,
+  "json": {
+    "status": {
+      "code": 2001,
+      "label": "SUCCESS",
+      "message": "Succeeded to generate reputation"
+    },
+    "resource": "bcd888ee0b4d54510822f059333dbed608bed361e275b22e2645905721775c0e",
+    "reputation": {
+      "classification": "Benign",
+      "confidence": "Low",
+      "severity": "N/A"
+    },
+    "risk": 0,
+    "context": {
+      "metadata": {
+        "CompanyName": "Zhuhai Kingsoft Office Software Co.,Ltd",
+        "LegalCopyright": "Copyright\u00a92025 Kingsoft Corporation. All rights reserved.",
+        "ProductName": "WPS Office",
+        "OriginalFileName": "konlinesetup_xa.exe",
+        "FileVersion": "12,2,0,21567"
+      }
+    },
+    "findings": {
+      "total": 71,
+      "positives": 2,
+      "file_name": "konlinesetup_xa.exe",
+      "file_type": "Win32 EXE",
+      "file_size": 5806072,
+      "file_version": "12,2,0,21567",
+      "company": "Zhuhai Kingsoft Office Software Co.,Ltd",
+      "first_seen": "2025-08-20 03:49:20"
+    }
+  }
+}

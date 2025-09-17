@@ -1,0 +1,38 @@
+{
+  "alert_file": "2271598949432351987.json",
+  "hostname": "vikas-lab2",
+  "result": {
+    "found": true,
+    "status": 200,
+    "hostname_queried": "vikas-lab2",
+    "assets_count": 1,
+    "json": [
+      {
+        "tags": [
+          {
+            "id": "",
+            "key": "S1_Asset_criticality",
+            "key_value": "S1_Asset_criticality:high",
+            "read_only": true,
+            "reserved": true,
+            "source": "System",
+            "value": "high"
+          }
+        ],
+        "alerts": [
+          {
+            "count": 8,
+            "severity": "Medium"
+          }
+        ],
+        "alertsCount": [
+          {
+            "count": 8,
+            "severity": "Medium"
+          }
+        ],
+        "subCategory": "Desktop"
+      }
+    ]
+  }
+}

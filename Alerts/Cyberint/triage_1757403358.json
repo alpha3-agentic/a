@@ -1,0 +1,127 @@
+{
+  "found": true,
+  "status": 200,
+  "endpoint": "GET file/sha256",
+  "summary": {
+    "risk": {
+      "malicious_score": 100,
+      "detected_activities": [
+        {
+          "type": "malware",
+          "observation_date": "2025-09-09T07:36:02.280853+00:00",
+          "description": "",
+          "confidence": 100,
+          "occurrences_count": 1,
+          "related_entities": null
+        },
+        {
+          "type": "malware_payload",
+          "observation_date": "2025-09-08T14:06:54+00:00",
+          "description": "Detected in 3516 source(s). Recognized as Trojan.DOC.Agent.AZF.",
+          "confidence": 80,
+          "occurrences_count": 369,
+          "related_entities": null
+        }
+      ],
+      "occurrences_count": 370
+    },
+    "severity": null,
+    "classification": null,
+    "matches": [
+      "4a24048f81afbe9fb62e7a6a49adbd1faf41f266b5f9feecdceb567aec096784"
+    ]
+  },
+  "json": {
+    "data": {
+      "entity": {
+        "type": "file/sha256",
+        "value": "4a24048f81afbe9fb62e7a6a49adbd1faf41f266b5f9feecdceb567aec096784"
+      },
+      "risk": {
+        "malicious_score": 100,
+        "detected_activities": [
+          {
+            "type": "malware",
+            "observation_date": "2025-09-09T07:36:02.280853+00:00",
+            "description": "",
+            "confidence": 100,
+            "occurrences_count": 1,
+            "related_entities": null
+          },
+          {
+            "type": "malware_payload",
+            "observation_date": "2025-09-08T14:06:54+00:00",
+            "description": "Detected in 3516 source(s). Recognized as Trojan.DOC.Agent.AZF.",
+            "confidence": 80,
+            "occurrences_count": 369,
+            "related_entities": null
+          }
+        ],
+        "occurrences_count": 370
+      },
+      "enrichment": {
+        "related_entities": null,
+        "filenames": [
+          "/home/remnux/Downloads/22.doc",
+          "/home/remnux/Downloads/sample.doc",
+          "/tmp/cortex-job-vdHY3YgBKzcbAVw2iwvd-11612116706072430323/input/attachment3513821427978378127",
+          "01_samples_for_upload\\483.vir",
+          "05-2022-0438 2.doc",
+          "05-2022-0438.doc",
+          "05-2022-0438.docx",
+          "1Ojc-S4G.json.part",
+          "4a24048f81afbe9fb62e7a6a49adbd1faf41f266b5f9feecdceb567aec096784.bin",
+          "4a24048f81afbe9fb62e7a6a49adbd1faf41f266b5f9feecdceb567aec096784.doc",
+          "<RunDir>\\05-2022-0438.doc",
+          "<RunDir>\\1\\sample\\sample.doc",
+          "<RunDir>\\4a24048f81afbe9fb62e7a6a49adbd1faf41f266b5f9feecdceb567aec096784.doc",
+          "<RunDir>\\CVE-2022-30190-main\\02-2022-0438.doc",
+          "<RunDir>\\sample\\sample.doc",
+          "<RunDir>\\sample_\\sample.doc",
+          "C:/Users/moham/Downloads/43eecf22e8f914d44df3da16c23dcc2e076a8753/sample/sample.doc",
+          "Malicious_doc_defender_test.doc",
+          "Malware-Analysis.file",
+          "Malware1.doc",
+          "NULL",
+          "btlo",
+          "c:\\temp\\06727ffda60359236a8029e0b3e8a0fd11c23313.bin",
+          "c:\\windows\\system32\\go45atojv.dll",
+          "decodeee.docx",
+          "extracted",
+          "fichierJohannePourTestMalware.doc",
+          "malvare.doc",
+          "sample (1).doc",
+          "sample - Copie.doc",
+          "sample /sample.doc",
+          "sample(1).doc",
+          "sample.DOC",
+          "sample.doc",
+          "sample.doc.bin",
+          "sample.doc.copy0",
+          "sample.doc.malware",
+          "sample.doc.malzzzzz",
+          "sample.doc.vir",
+          "sample.doc.zip",
+          "sample.doc_",
+          "sample.docx",
+          "sample.exe",
+          "sample.infected",
+          "sample.rar",
+          "sample.txt",
+          "sample.zip",
+          "sample/sample.doc",
+          "sample1.doc",
+          "suspicious_file.doc",
+          "testo"
+        ],
+        "first_seen": "2022-05-27T13:06:45+00:00",
+        "download_urls": [
+          "http://20.127.157.162/sample.doc",
+          "http://38.121.42.203/05-2022-0438.doc",
+          "https://sissy221a-cautious-umbrella-xj4wvxgjrxwhjqr-8000.preview.app.github.dev/sample.doc"
+        ]
+      },
+      "benign": false
+    }
+  }
+}

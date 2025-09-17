@@ -1,0 +1,25 @@
+{
+  "found": true,
+  "status": 200,
+  "json": {
+    "status": {
+      "code": 2001,
+      "label": "SUCCESS",
+      "message": "Succeeded to generate reputation"
+    },
+    "resource": "ffca1a7f978933b6973146a02e59b37b479936a7f99bd074d67739da20ee89e3",
+    "reputation": {
+      "classification": "Benign",
+      "confidence": "Medium",
+      "severity": "N/A"
+    },
+    "risk": 0,
+    "findings": {
+      "total": 64,
+      "positives": 0,
+      "file_type": "Office Open XML Document",
+      "file_size": 23074,
+      "first_seen": "2025-08-01 19:34:32"
+    }
+  }
+}

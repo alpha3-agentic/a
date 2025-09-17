@@ -1,0 +1,11 @@
+{
+  "alert_file": "2247079974953055101.json",
+  "hostname": "EY-WS-1001",
+  "result": {
+    "found": true,
+    "status": 200,
+    "hostname_queried": "EY-WS-1001",
+    "assets_count": 0,
+    "json": []
+  }
+}

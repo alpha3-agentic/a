@@ -1,0 +1,37 @@
+{
+  "found": true,
+  "status": 200,
+  "json": {
+    "status": {
+      "code": 2001,
+      "label": "SUCCESS",
+      "message": "Succeeded to generate reputation"
+    },
+    "resource": "c33e6952fe5a2152ca9c1d487321b2a41430b203a8543c86af6b741678f4b715",
+    "reputation": {
+      "classification": "Benign",
+      "confidence": "Medium",
+      "severity": "N/A"
+    },
+    "risk": 0,
+    "context": {
+      "metadata": {
+        "CompanyName": "                                                            ",
+        "LegalCopyright": "\u00a9 2085 Infinity Soft Technologies. Statement 708                                                    ",
+        "ProductName": "debug-cod                                                   ",
+        "OriginalFileName": "debug-cod                                         ",
+        "FileVersion": "51.1052.0.0"
+      }
+    },
+    "findings": {
+      "total": 71,
+      "positives": 0,
+      "file_name": "debug-cod                                         ",
+      "file_type": "Win32 EXE",
+      "file_size": 3523072,
+      "file_version": "51.1052.0.0",
+      "company": "                                                            ",
+      "first_seen": "2025-06-28 06:50:53"
+    }
+  }
+}

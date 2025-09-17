@@ -1,0 +1,73 @@
+{
+  "found": true,
+  "status": 200,
+  "endpoint": "GET file/sha256",
+  "summary": {
+    "risk": {
+      "malicious_score": 100,
+      "detected_activities": [
+        {
+          "type": "malware",
+          "observation_date": "2025-09-17T07:25:00.637854Z",
+          "description": "",
+          "confidence": 100,
+          "occurrences_count": 1,
+          "related_entities": null
+        },
+        {
+          "type": "malware_payload",
+          "observation_date": "2025-06-28T08:49:39Z",
+          "description": "Detected in 1 source(s). Recognized as Trojan.Ransom.Poison.B.",
+          "confidence": 80,
+          "occurrences_count": 1,
+          "related_entities": null
+        }
+      ],
+      "occurrences_count": 2
+    },
+    "severity": null,
+    "classification": null,
+    "matches": [
+      "75f3249fa95b65db859d4984b6f1ff0a460445588b37300382723123d353e378"
+    ]
+  },
+  "json": {
+    "data": {
+      "entity": {
+        "type": "file/sha256",
+        "value": "75f3249fa95b65db859d4984b6f1ff0a460445588b37300382723123d353e378"
+      },
+      "risk": {
+        "malicious_score": 100,
+        "detected_activities": [
+          {
+            "type": "malware",
+            "observation_date": "2025-09-17T07:25:00.637854Z",
+            "description": "",
+            "confidence": 100,
+            "occurrences_count": 1,
+            "related_entities": null
+          },
+          {
+            "type": "malware_payload",
+            "observation_date": "2025-06-28T08:49:39Z",
+            "description": "Detected in 1 source(s). Recognized as Trojan.Ransom.Poison.B.",
+            "confidence": 80,
+            "occurrences_count": 1,
+            "related_entities": null
+          }
+        ],
+        "occurrences_count": 2
+      },
+      "enrichment": {
+        "related_entities": null,
+        "filenames": [
+          "/scratch/zoo/2025/06/28/fba8bfa9af6aeb42fd6411e210493df1"
+        ],
+        "first_seen": "2025-06-28T08:49:39Z",
+        "download_urls": []
+      },
+      "benign": false
+    }
+  }
+}

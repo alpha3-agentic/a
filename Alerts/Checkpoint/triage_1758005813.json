@@ -1,0 +1,25 @@
+{
+  "found": true,
+  "status": 200,
+  "json": {
+    "status": {
+      "code": 2001,
+      "label": "SUCCESS",
+      "message": "Succeeded to generate reputation"
+    },
+    "resource": "ffc439f449a7159040c3dbf924df891be4a36336bd10cfafd218c55df832bed5",
+    "reputation": {
+      "classification": "Malware",
+      "confidence": "High",
+      "severity": "High"
+    },
+    "risk": 100,
+    "findings": {
+      "total": 72,
+      "positives": 61,
+      "file_type": "Win32 EXE",
+      "file_size": 782336,
+      "first_seen": "2025-06-28 08:49:36"
+    }
+  }
+}

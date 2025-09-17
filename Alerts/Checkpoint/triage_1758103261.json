@@ -1,0 +1,32 @@
+{
+  "found": true,
+  "status": 200,
+  "json": {
+    "status": {
+      "code": 2001,
+      "label": "SUCCESS",
+      "message": "Succeeded to generate reputation"
+    },
+    "resource": "75f3249fa95b65db859d4984b6f1ff0a460445588b37300382723123d353e378",
+    "reputation": {
+      "classification": "Malware",
+      "confidence": "High",
+      "severity": "High"
+    },
+    "risk": 100,
+    "context": {
+      "malware_family": "VB",
+      "protection_name": "HEUR:Trojan.Win32.VB.gen.TC.d4cdBYDw",
+      "malware_types": [
+        "HEUR:Trojan"
+      ]
+    },
+    "findings": {
+      "total": 72,
+      "positives": 55,
+      "file_type": "Win32 EXE",
+      "file_size": 14336,
+      "first_seen": "2025-06-28 08:49:39"
+    }
+  }
+}

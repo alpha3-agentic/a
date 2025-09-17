@@ -1,0 +1,88 @@
+{
+  "found": true,
+  "status": 200,
+  "endpoint": "GET file/sha256",
+  "summary": {
+    "risk": {
+      "malicious_score": 100,
+      "detected_activities": [
+        {
+          "type": "malware",
+          "observation_date": "2025-09-17T09:35:53.599429Z",
+          "description": "",
+          "confidence": 100,
+          "occurrences_count": 1,
+          "related_entities": null
+        },
+        {
+          "type": "malware_payload",
+          "observation_date": "2018-05-27T05:41:48Z",
+          "description": "Detected in 3 source(s). Recognized as Win-PUP/SearchSuite.X1425.",
+          "confidence": 80,
+          "occurrences_count": 1,
+          "related_entities": null
+        }
+      ],
+      "occurrences_count": 2
+    },
+    "severity": null,
+    "classification": null,
+    "matches": [
+      "84d0797d47e969c2a6c7e1811837eab70e4f0c7d57f3cc16020acdb9deb0101a"
+    ]
+  },
+  "json": {
+    "data": {
+      "entity": {
+        "type": "file/sha256",
+        "value": "84d0797d47e969c2a6c7e1811837eab70e4f0c7d57f3cc16020acdb9deb0101a"
+      },
+      "risk": {
+        "malicious_score": 100,
+        "detected_activities": [
+          {
+            "type": "malware",
+            "observation_date": "2025-09-17T09:35:53.599429Z",
+            "description": "",
+            "confidence": 100,
+            "occurrences_count": 1,
+            "related_entities": null
+          },
+          {
+            "type": "malware_payload",
+            "observation_date": "2018-05-27T05:41:48Z",
+            "description": "Detected in 3 source(s). Recognized as Win-PUP/SearchSuite.X1425.",
+            "confidence": 80,
+            "occurrences_count": 1,
+            "related_entities": null
+          }
+        ],
+        "occurrences_count": 2
+      },
+      "enrichment": {
+        "related_entities": null,
+        "filenames": [
+          "C:\\Program Files (x86)\\iLivid\\QtWebKit4.dll",
+          "C:\\Users\\Admin\\AppData\\Local\\iLivid\\QtWebKit4.dll",
+          "C:\\Users\\Ashley\\AppData\\Local\\iLivid\\QtWebKit4.dll",
+          "C:\\Users\\Ellen\\AppData\\Local\\iLivid\\QtWebKit4.dll",
+          "C:\\Users\\Marcia\\AppData\\Local\\iLivid\\QtWebKit4.dll",
+          "C:\\Users\\Nicole\\AppData\\Local\\iLivid\\QtWebKit4.dll",
+          "C:\\Users\\Owner\\AppData\\Local\\iLivid\\QtWebKit4.dll",
+          "C:\\Users\\Poss-Abilities\\AppData\\Local\\iLivid\\QtWebKit4.dll",
+          "C:\\Users\\bunzymr\\AppData\\Local\\iLivid\\QtWebKit4.dll",
+          "C:\\Users\\cantr_000\\AppData\\Local\\iLivid\\QtWebKit4.dll",
+          "C:\\Users\\lloth\\AppData\\Local\\iLivid\\QtWebKit4.dll",
+          "C:\\Users\\logan\\AppData\\Local\\iLivid\\QtWebKit4.dll",
+          "QtWebKit4 (2).dll",
+          "QtWebKit4.dll",
+          "c:\\windows\\system32\\dqwf5czo3.dll",
+          "qtwebkit4.dll"
+        ],
+        "first_seen": "2014-02-19T02:14:09",
+        "download_urls": []
+      },
+      "benign": false
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "found": false,
+  "error": "api_key_not_configured",
+  "message": "Please set VIRUSTOTAL_API_KEY in your .env"
+}

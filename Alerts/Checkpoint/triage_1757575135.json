@@ -1,0 +1,35 @@
+{
+  "found": true,
+  "status": 200,
+  "json": {
+    "status": {
+      "code": 2001,
+      "label": "SUCCESS",
+      "message": "Succeeded to generate reputation"
+    },
+    "resource": "db2454bfcad98ebfc9999f503064843940083a45",
+    "reputation": {
+      "classification": "Malware",
+      "confidence": "High",
+      "severity": "High"
+    },
+    "risk": 100,
+    "context": {
+      "metadata": {
+        "LegalCopyright": "Copyright \u00a9  2020",
+        "ProductName": "BadPotato",
+        "OriginalFileName": "BadPotato.exe",
+        "FileVersion": "1.0.0.0"
+      }
+    },
+    "findings": {
+      "total": 72,
+      "positives": 55,
+      "file_name": "BadPotato.exe",
+      "file_type": "Win32 EXE",
+      "file_size": 61440,
+      "file_version": "1.0.0.0",
+      "first_seen": "2022-09-07 03:51:01"
+    }
+  }
+}

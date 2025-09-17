@@ -1,0 +1,32 @@
+{
+  "found": true,
+  "status": 200,
+  "json": {
+    "status": {
+      "code": 2001,
+      "label": "SUCCESS",
+      "message": "Succeeded to generate reputation"
+    },
+    "resource": "78b265eb93111ab763b559c1df2deef34047bdcb16feb6b018e7d8d401b82e51",
+    "reputation": {
+      "classification": "Malware",
+      "confidence": "High",
+      "severity": "High"
+    },
+    "risk": 100,
+    "context": {
+      "metadata": {
+        "CompanyName": "Galt Technology",
+        "LegalCopyright": "Galt Technology"
+      }
+    },
+    "findings": {
+      "total": 72,
+      "positives": 48,
+      "file_type": "Win32 EXE",
+      "file_size": 636536,
+      "company": "Galt Technology",
+      "first_seen": "2023-08-05 21:12:11"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "found": true,
+  "status": 200,
+  "json": {
+    "status": {
+      "code": 2001,
+      "label": "SUCCESS",
+      "message": "Succeeded to generate reputation"
+    },
+    "resource": "84791db42a6f321ea70cfcbf13913fa4e02533f8",
+    "reputation": {
+      "classification": "Malware",
+      "confidence": "High",
+      "severity": "High"
+    },
+    "risk": 100,
+    "context": {
+      "malware_family": "Miner",
+      "protection_name": "not-a-virus:HEUR:RiskTool.Linux.Miner.gen.TC.260csWXS",
+      "malware_types": [
+        "a",
+        "not",
+        "virus:HEUR:RiskTool"
+      ]
+    },
+    "findings": {
+      "total": 65,
+      "positives": 38,
+      "file_type": "ELF",
+      "file_size": 8912112,
+      "first_seen": "2024-03-05 05:56:45"
+    }
+  }
+}

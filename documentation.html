@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Model: Feature Engineering Deep Dive</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #718096;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            color: #2d3748;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .section h3 {
+            font-size: 1.4rem;
+            color: #4a5568;
+            margin: 25px 0 15px 0;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-left: 5px solid #ed8936;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-left: 5px solid #38b2ac;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: #f7fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .feature-card h4 {
+            color: #2d3748;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #f7fafc;
+        }
+
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 2px;
+            font-weight: 500;
+        }
+
+        .tag.raw { background: #48bb78; }
+        .tag.engineered { background: #ed8936; }
+        .tag.cluster { background: #9f7aea; }
+        .tag.categorical { background: #38b2ac; }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .formula {
+            background: #f1f5f9;
+            border: 1px solid #cbd5e0;
+            border-radius: 8px;
+            padding: 15px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            margin: 10px 0;
+            color: #2d3748;
+        }
+
+        .warning {
+            background: #fed7d7;
+            border-left: 5px solid #f56565;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 10px; }
+            .header { padding: 25px; }
+            .header h1 { font-size: 2rem; }
+            .section { padding: 20px; }
+            .feature-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 ML Model Architecture</h1>
+            <p>Comprehensive guide to feature engineering, model training, and prediction pipeline for threat detection</p>
+        </div>
+
+        <div class="section">
+            <h2>📊 Model Overview</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">12</div>
+                    <div>Raw JSON Fields</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">68</div>
+                    <div>Enhanced Features</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">13</div>
+                    <div>Final Training Features</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">MI</div>
+                    <div>Feature Selection Method</div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>Target Variable:</strong> The model predicts <code>verdict</code> from <code>threat.verdict</code>, <code>verdict</code>, or <code>analyst_verdict</code> JSON paths, representing the final classification of threats.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔧 Raw Data Extraction (12 Fields)</h2>
+            <p>These are the base inputs extracted directly from JSON before any feature engineering:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature Column</th>
+                        <th>JSON Source Path</th>
+                        <th>Processing Notes</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>file_size</code></td>
+                        <td>file.size</td>
+                        <td>0 if missing</td>
+                        <td><span class="tag raw">Numeric</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>file_extension</code></td>
+                        <td>file.extension</td>
+                        <td>lowercased; "unknown" if missing</td>
+                        <td><span class="tag raw">Categorical</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>file_extension_type</code></td>
+                        <td>file.extension_type</td>
+                        <td>lowercased; "unknown" if missing</td>
+                        <td><span class="tag raw">Categorical</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>verification_type</code></td>
+                        <td>file.verification.type</td>
+                        <td>lowercased; "unknown" if missing</td>
+                        <td><span class="tag raw">Categorical</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>is_valid_certificate</code></td>
+                        <td>file.signature.certificate.status</td>
+                        <td>1 if "valid", else 0</td>
+                        <td><span class="tag raw">Binary</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>threat_confidence</code></td>
+                        <td>threat.confidence</td>
+                        <td>defaults to 50 if missing</td>
+                        <td><span class="tag raw">Numeric</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>detection_type</code></td>
+                        <td>threat.detection.type</td>
+                        <td>lowercased; "unknown" if missing</td>
+                        <td><span class="tag raw">Categorical</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>os_name</code></td>
+                        <td>device.os.name</td>
+                        <td>lowercased; "unknown" if missing</td>
+                        <td><span class="tag raw">Categorical</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>device_type</code></td>
+                        <td>device.type</td>
+                        <td>lowercased; "unknown" if missing</td>
+                        <td><span class="tag raw">Categorical</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>is_active</code></td>
+                        <td>device.is_active</td>
+                        <td>1 if true, else 0</td>
+                        <td><span class="tag raw">Binary</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>is_fileless</code></td>
+                        <td>process.is_fileless</td>
+                        <td>1 if true, else 0</td>
+                        <td><span class="tag raw">Binary</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>confidence_level</code></td>
+                        <td>confidence_level (root)</td>
+                        <td>lowercased; "unknown" if missing</td>
+                        <td><span class="tag raw">Categorical</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>🏗️ Feature Engineering Pipeline</h2>
+            <p>The model transforms raw data into 68 engineered features, then selects the top 13 using Mutual Information scoring.</p>
+
+            <h3>Final 13 Training Features</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>cluster_isolation_score <span class="tag cluster">Cluster</span></h4>
+                    <p>Relative isolation from behavior clusters. High values indicate outlier behavior patterns.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>min_cluster_distance <span class="tag cluster">Cluster</span></h4>
+                    <p>Absolute distance to nearest behavioral cluster centroid.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>size_confidence_ratio <span class="tag engineered">Cross-Signal</span></h4>
+                    <p>Contextualizes file size with threat confidence level.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>file_size_x_threat_confidence <span class="tag engineered">Cross-Signal</span></h4>
+                    <p>Product of file size and threat confidence for interaction effects.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>file_size_ben_distance <span class="tag engineered">Size View</span></h4>
+                    <p>Distance from typical benign file size distribution.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>file_size_likelihood_ratio <span class="tag engineered">Size View</span></h4>
+                    <p>Likelihood ratio comparing malicious vs benign size distributions.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>file_size_mal_distance <span class="tag engineered">Size View</span></h4>
+                    <p>Distance from typical malicious file size distribution.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>file_size_zscore <span class="tag engineered">Size View</span></h4>
+                    <p>Standardized file size using log transformation and z-scoring.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>file_size <span class="tag raw">Raw</span></h4>
+                    <p>Original file size value preserved for direct model access.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>file_extension_rarity_score <span class="tag categorical">Category Prior</span></h4>
+                    <p>Rarity score based on extension frequency in training data.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>file_extension_standard_encoded <span class="tag categorical">Category Prior</span></h4>
+                    <p>Label-encoded file extension for stable categorical representation.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>os_name_rarity_score <span class="tag categorical">Category Prior</span></h4>
+                    <p>Rarity score based on OS name frequency in training data.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>os_name_target_encoded <span class="tag categorical">Category Prior</span></h4>
+                    <p>Smoothed malware rate by operating system from historical data.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Feature Families & Design Philosophy</h2>
+
+            <h3>1. Behavior Clusters</h3>
+            <div class="info-box">
+                <strong>Fields:</strong> <code>cluster_isolation_score</code>, <code>min_cluster_distance</code><br>
+                <strong>Purpose:</strong> Capture overall alert posture by comparing to learned behavior patterns. The combination of size, confidence, activity status, fileless execution, and signature validity forms recognizable behavioral "shapes" (e.g., "tiny unsigned droppers").
+            </div>
+
+            <div class="highlight-box">
+                <h4>Why Two Cluster Features?</h4>
+                <ul>
+                    <li><strong>min_cluster_distance:</strong> Absolute closeness to nearest cluster</li>
+                    <li><strong>cluster_isolation_score:</strong> Relative isolation (min_distance / mean_distance)</li>
+                    <li><strong>Together:</strong> Distinguish between "clearly belongs to one cluster" vs "outlier far from all clusters"</li>
+                </ul>
+                
+                <div class="formula">
+cluster_isolation_score = min_cluster_distance / (mean(all_distances) + 1e-6)
+                </div>
+
+                <strong>Interpretation Examples:</strong>
+                <ul>
+                    <li>Low isolation + small distance = Strong cluster match</li>
+                    <li>High isolation + large distance = Novel/outlier behavior</li>
+                    <li>High isolation + small distance = Borderline case</li>
+                </ul>
+            </div>
+
+            <h3>2. File Size Views</h3>
+            <div class="info-box">
+                <strong>Fields:</strong> <code>file_size</code>, <code>file_size_zscore</code>, <code>file_size_mal_distance</code>, <code>file_size_ben_distance</code>, <code>file_size_likelihood_ratio</code><br>
+                <strong>Purpose:</strong> Multiple perspectives on the same signal make the model robust to simple evasion tactics like file padding. Each view provides complementary and interpretable insights.
+            </div>
+
+            <h3>3. Cross-Signals</h3>
+            <div class="info-box">
+                <strong>Fields:</strong> <code>size_confidence_ratio</code>, <code>file_size_x_threat_confidence</code><br>
+                <strong>Purpose:</strong> Contextualize file size with engine confidence. A tiny file with very high confidence is much more suspicious than size alone would suggest.
+            </div>
+
+            <h3>4. Category Priors & Rarity</h3>
+            <div class="info-box">
+                <strong>Fields:</strong> <code>file_extension_rarity_score</code>, <code>file_extension_standard_encoded</code>, <code>os_name_rarity_score</code>, <code>os_name_target_encoded</code><br>
+                <strong>Purpose:</strong> Incorporate environmental base-rate knowledge. Understanding what's common vs. risky historically helps maintain calibration and reduce false positives.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🧮 Mathematical Formulations</h2>
+
+            <h3>Behavior Clustering</h3>
+            <div class="formula">
+# Training Phase:
+1. StandardScaler fit on [file_size, threat_confidence, is_active, is_fileless, is_valid_certificate]
+2. KMeans(n_clusters=2-5) fit on scaled features
+3. For each sample: compute distances to all centroids
+
+# Inference Phase:
+min_cluster_distance = min(distances_to_centroids)
+cluster_isolation_score = min_cluster_distance / (mean(distances_to_centroids) + 1e-6)
+            </div>
+
+            <h3>File Size Transformations</h3>
+            <div class="formula">
+# Cross-signals
+size_confidence_ratio = (file_size + 1) / (threat_confidence + 1)
+file_size_x_threat_confidence = file_size * threat_confidence
+
+# Distribution distances
+file_size_ben_distance = abs(file_size - benign_median) / (benign_std + 1e-6)
+file_size_mal_distance = abs(file_size - malicious_median) / (malicious_std + 1e-6)
+
+# Z-score transformation
+file_size_zscore = (log1p(file_size) - global_mean) / (global_std + 1e-6)
+
+# Likelihood ratio
+file_size_likelihood_ratio = 
+    exp(-0.5*((x-μ_mal)/σ_mal)²) / exp(-0.5*((x-μ_ben)/σ_ben)²)
+            </div>
+
+            <h3>Categorical Encodings</h3>
+            <div class="formula">
+# Rarity scores
+rarity_score = 1 - (count(category) / total_samples)
+
+# Target encoding (smoothed)
+target_encoded = (category_mean*count + global_mean*smoothing) / (count + smoothing)
+# where smoothing = 10
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔍 Feature Selection Process</h2>
+            
+            <div class="highlight-box">
+                <strong>Method:</strong> Mutual Information (MI) scoring with interactive selection
+            </div>
+
+            <h3>Selection Pipeline</h3>
+            <ol>
+                <li><strong>Compute MI scores:</strong> <code>mutual_info_classif(X.fillna(0), y, random_state=42)</code></li>
+                <li><strong>Rank features:</strong> Sort by MI score (descending)</li>
+                <li><strong>Present Top-K:</strong> Show ranked list to user</li>
+                <li><strong>Interactive selection:</strong> User approves final feature set</li>
+                <li><strong>Model training:</strong> Use only selected features</li>
+            </ol>
+
+            <div class="info-box">
+                <strong>Why Mutual Information?</strong>
+                <ul>
+                    <li>Model-agnostic feature importance</li>
+                    <li>Captures non-linear relationships</li>
+                    <li>Works well with mixed data types</li>
+                    <li>Effective preprocessing for tree-based models</li>
+                </ul>
+            </div>
+
+            <h3>Selection Modes</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>Interactive Mode</h4>
+                    <p>User reviews Top-K features and selects subset by index or name</p>
+                </div>
+                <div class="feature-card">
+                    <h4>High-Importance Mode</h4>
+                    <p>Automatically selects features above median MI score</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Use All Features</h4>
+                    <p>Skip selection and train on full 68-feature set</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💾 Model Persistence</h2>
+            <p>The complete pipeline is saved in <code>best_model.pkl</code> containing:</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>🤖 Trained Model</h4>
+                    <p>Random Forest or Gradient Boosting classifier</p>
+                </div>
+                <div class="feature-card">
+                    <h4>📏 Scalers</h4>
+                    <p>StandardScaler for final model inputs and cluster features</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🏷️ Encoders</h4>
+                    <p>LabelEncoder for target and categorical features</p>
+                </div>
+                <div class="feature-card">
+                    <h4>📊 Statistics</h4>
+                    <p>Per-class stats, frequency maps, target encodings</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🎯 Centroids</h4>
+                    <p>KMeans cluster centroids and scaling parameters</p>
+                </div>
+                <div class="feature-card">
+                    <h4>📋 Metadata</h4>
+                    <p>Feature list with exact column names and order</p>
+                </div>
+            </div>
+
+            <div class="warning">
+                <strong>⚠️ No Traditional Embeddings:</strong> The model doesn't use neural network embeddings. KMeans centroids serve as task-specific behavioral representations, but they're not general-purpose embeddings.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>✅ Best Practices & Sanity Checks</h2>
+
+            <h3>🎯 Ensuring Prediction Parity</h3>
+            <div class="info-box">
+                <ul>
+                    <li><strong>Feature Computation:</strong> Verify each expected feature is computed correctly</li>
+                    <li><strong>Default Handling:</strong> Monitor when features default to fallback values</li>
+                    <li><strong>Column Order:</strong> Maintain exact feature order from training</li>
+                    <li><strong>Scaling Consistency:</strong> Use identical scaling parameters from training</li>
+                </ul>
+            </div>
+
+            <h3>📈 Monitoring Model Drift</h3>
+            <div class="highlight-box">
+                <ul>
+                    <li><strong>Environment Changes:</strong> New OS rollouts or software mix changes</li>
+                    <li><strong>Frequency Updates:</strong> Refresh rarity scores periodically</li>
+                    <li><strong>Target Encoding:</strong> Update OS risk priors with new data</li>
+                    <li><strong>Retraining Triggers:</strong> Monitor prediction confidence and accuracy</li>
+                </ul>
+            </div>
+
+            <h3>🔧 Debugging Checklist</h3>
+            <div class="code-block">
+✓ All 13 features present in prediction input
+✓ Feature values within expected ranges  
+✓ No unexpected NaN or infinite values
+✓ Categorical encodings match training vocabulary
+✓ Cluster distances computed with correct centroids
+✓ Statistical parameters match training artifacts
+            </div>
+        </div>
+    </div>
+</body>
+</html>

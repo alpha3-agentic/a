@@ -1,0 +1,14 @@
+{
+  "found": false,
+  "status": 404,
+  "error": "http_404",
+  "message": "HTTP 404",
+  "json": {
+    "error": true,
+    "error_code": 2,
+    "message": "Item Not Found",
+    "response": {},
+    "status": 404,
+    "error_details": {}
+  }
+}

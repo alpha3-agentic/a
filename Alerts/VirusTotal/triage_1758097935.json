@@ -1,0 +1,1207 @@
+{
+  "found": true,
+  "status": 200,
+  "json": {
+    "data": {
+      "id": "055354d719a39cae0bd2ef78706f05e0f23d40f5071840970560016163f98140",
+      "type": "file",
+      "links": {
+        "self": "https://www.virustotal.com/api/v3/files/055354d719a39cae0bd2ef78706f05e0f23d40f5071840970560016163f98140"
+      },
+      "attributes": {
+        "pe_info": {
+          "timestamp": 1728116260,
+          "imphash": "dd19ce97c4cf5434c05e26f56612e5b3",
+          "machine_type": 34404,
+          "entry_point": 6160,
+          "resource_details": [
+            {
+              "lang": "ENGLISH US",
+              "chi2": 73217.73,
+              "filetype": "unknown",
+              "entropy": 3.5173699855804443,
+              "sha256": "83d014fab94c56ddd50c9c40fdb037554f11241cdecaf909d0ba274ab651de40",
+              "type": "RT_VERSION"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 1
+          },
+          "resource_types": {
+            "RT_VERSION": 1
+          },
+          "overlay": {
+            "chi2": 22805.38,
+            "filetype": "unknown",
+            "entropy": 7.564277648925781,
+            "offset": 27648,
+            "md5": "9e268e819aaaafa79228064e22b647dd",
+            "size": 22496
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 49256.41,
+              "virtual_address": 4096,
+              "entropy": 6.07,
+              "raw_size": 5120,
+              "flags": "rx",
+              "virtual_size": 4876,
+              "md5": "4ebef841338bee146dfe37063521020b"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 180888.5,
+              "virtual_address": 12288,
+              "entropy": 4.74,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 3940,
+              "md5": "f9f16740cab7e4f54306009b50e084e4"
+            },
+            {
+              "name": ".data",
+              "chi2": 103619.0,
+              "virtual_address": 16384,
+              "entropy": 0.94,
+              "raw_size": 512,
+              "flags": "rw",
+              "virtual_size": 1064,
+              "md5": "3be9d0baf6a3cec185a8ad4700d9ce46"
+            },
+            {
+              "name": ".pdata",
+              "chi2": 125119.0,
+              "virtual_address": 20480,
+              "entropy": 2.84,
+              "raw_size": 1024,
+              "flags": "r",
+              "virtual_size": 648,
+              "md5": "21220f8ec2c1f483370b8948715522ba"
+            },
+            {
+              "name": "PAGE",
+              "chi2": 78971.33,
+              "virtual_address": 24576,
+              "entropy": 6.24,
+              "raw_size": 9728,
+              "flags": "rx",
+              "virtual_size": 9230,
+              "md5": "97aee6cdf9ee433bd2290d51f99ecadd"
+            },
+            {
+              "name": "INIT",
+              "chi2": 49525.38,
+              "virtual_address": 36864,
+              "entropy": 6.02,
+              "raw_size": 4096,
+              "flags": "rx",
+              "virtual_size": 3928,
+              "md5": "cc7f5a91a01ca8572bb5b940f07e2dbb"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 199897.7,
+              "virtual_address": 40960,
+              "entropy": 2.49,
+              "raw_size": 1536,
+              "flags": "r",
+              "virtual_size": 1040,
+              "md5": "f868bbceb5cee9d0f53b22b6880d9d58"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 98637.0,
+              "virtual_address": 45056,
+              "entropy": 1.15,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 84,
+              "md5": "98443342a75a9860d8a34d5236eca3a2"
+            }
+          ],
+          "compiler_product_versions": [
+            "[---] Unmarked objects count=48",
+            "id: 0x107, version: 30795 count=3",
+            "id: 0x101, version: 30795 count=5",
+            "id: 0x103, version: 30795 count=5",
+            "id: 0x104, version: 30795 count=7",
+            "id: 0x104, version: 34120 count=5",
+            "id: 0xff, version: 34120 count=1",
+            "id: 0x102, version: 34120 count=1"
+          ],
+          "rich_pe_header_hash": "fb6b70e5256990b774332fcc832423bc",
+          "debug": [
+            {
+              "timestamp": "Sat Oct  5 08:17:40 2024",
+              "codeview": {
+                "age": 1,
+                "guid": "c0bd28f8-89c1-4cf2-9bff-adb8e319a959",
+                "name": "c:\\Jenkins\\workspace\\SignedModules\\win\\SignedModules\\Release\\GTBMtpFilter64.pdb",
+                "signature": "RSDS"
+              },
+              "offset": 8448,
+              "type_str": "IMAGE_DEBUG_TYPE_CODEVIEW",
+              "type": 2,
+              "size": 104
+            },
+            {
+              "type_str": "IMAGE_DEBUG_TYPE_POGO",
+              "timestamp": "Sat Oct  5 08:17:40 2024",
+              "size": 552,
+              "type": 13,
+              "offset": 8552
+            }
+          ],
+          "import_list": [
+            {
+              "library_name": "ntoskrnl.exe",
+              "imported_functions": [
+                "_snwprintf",
+                "_vsnprintf",
+                "_vsnwprintf",
+                "DbgPrintEx",
+                "ExAcquireResourceExclusiveLite",
+                "ExAllocatePoolWithTag",
+                "ExDeleteResourceLite",
+                "ExFreePoolWithTag",
+                "ExInitializeResourceLite",
+                "ExReleaseResourceLite",
+                "ExSystemTimeToLocalTime",
+                "KeEnterCriticalRegion",
+                "KeInitializeEvent",
+                "KeLeaveCriticalRegion",
+                "KeResetEvent",
+                "KeSetEvent",
+                "KeWaitForMultipleObjects",
+                "ObfDereferenceObject",
+                "ObReferenceObjectByHandle",
+                "PsCreateSystemThread",
+                "PsGetCurrentProcessId",
+                "PsTerminateSystemThread",
+                "RtlCopyUnicodeString",
+                "RtlEqualUnicodeString",
+                "RtlGetVersion",
+                "RtlInitUnicodeString",
+                "RtlTimeToTimeFields",
+                "ZwClose",
+                "ZwCreateEvent",
+                "ZwCreateFile",
+                "ZwCreateKey",
+                "ZwQueryDirectoryFile",
+                "ZwQueryValueKey",
+                "ZwSetInformationFile",
+                "ZwWaitForMultipleObjects",
+                "ZwWaitForSingleObject",
+                "ZwWriteFile"
+              ]
+            },
+            {
+              "library_name": "WDFLDR.SYS",
+              "imported_functions": [
+                "WdfLdrQueryInterface",
+                "WdfVersionBind",
+                "WdfVersionBindClass",
+                "WdfVersionUnbind",
+                "WdfVersionUnbindClass"
+              ]
+            }
+          ]
+        },
+        "sha1": "b056db4faa57c3be0d344550d2a71a48fa480598",
+        "type_extension": "exe",
+        "md5": "a21aad7c878b2dd1579e1828427fcd03",
+        "sha256": "055354d719a39cae0bd2ef78706f05e0f23d40f5071840970560016163f98140",
+        "last_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.208",
+            "engine_update": "20250528",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250529",
+            "category": "undetected",
+            "result": null
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "12.240.55939",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Alibaba": {
+            "method": "blacklist",
+            "engine_name": "Alibaba",
+            "engine_version": "0.3.0.5",
+            "engine_update": "20190527",
+            "category": "undetected",
+            "result": null
+          },
+          "K7GW": {
+            "method": "blacklist",
+            "engine_name": "K7GW",
+            "engine_version": "12.240.55939",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "CrowdStrike": {
+            "method": "blacklist",
+            "engine_name": "CrowdStrike",
+            "engine_version": "1.0",
+            "engine_update": "20231026",
+            "category": "undetected",
+            "result": null
+          },
+          "Baidu": {
+            "method": "blacklist",
+            "engine_name": "Baidu",
+            "engine_version": "1.0.0.2",
+            "engine_update": "20190318",
+            "category": "undetected",
+            "result": null
+          },
+          "VirIT": {
+            "method": "blacklist",
+            "engine_name": "VirIT",
+            "engine_version": "9.5.966",
+            "engine_update": "20250530",
+            "category": "undetected",
+            "result": null
+          },
+          "Symantec": {
+            "method": "blacklist",
+            "engine_name": "Symantec",
+            "engine_version": "1.22.0.0",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "ESET-NOD32": {
+            "method": "blacklist",
+            "engine_name": "ESET-NOD32",
+            "engine_version": "31301",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "APEX": {
+            "method": "blacklist",
+            "engine_name": "APEX",
+            "engine_version": "6.661",
+            "engine_update": "20250601",
+            "category": "undetected",
+            "result": null
+          },
+          "TrendMicro-HouseCall": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro-HouseCall",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Paloalto": {
+            "method": "blacklist",
+            "engine_name": "Paloalto",
+            "engine_version": "0.9.0.1003",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.2.0",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "Kaspersky": {
+            "method": "blacklist",
+            "engine_name": "Kaspersky",
+            "engine_version": "22.0.1.28",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "BitDefender": {
+            "method": "blacklist",
+            "engine_name": "BitDefender",
+            "engine_version": "7.2",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "NANO-Antivirus": {
+            "method": "blacklist",
+            "engine_name": "NANO-Antivirus",
+            "engine_version": "1.0.170.26710",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "SUPERAntiSpyware": {
+            "method": "blacklist",
+            "engine_name": "SUPERAntiSpyware",
+            "engine_version": "5.6.0.1032",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "Avast": {
+            "method": "blacklist",
+            "engine_name": "Avast",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "Tencent": {
+            "method": "blacklist",
+            "engine_name": "Tencent",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Emsisoft": {
+            "method": "blacklist",
+            "engine_name": "Emsisoft",
+            "engine_version": "2024.8.0.61147",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Google": {
+            "method": "blacklist",
+            "engine_name": "Google",
+            "engine_version": "1748928642",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "F-Secure": {
+            "method": "blacklist",
+            "engine_name": "F-Secure",
+            "engine_version": "18.10.1547.307",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "DrWeb": {
+            "method": "blacklist",
+            "engine_name": "DrWeb",
+            "engine_version": "7.0.67.2170",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5372",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "TrendMicro": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "McAfeeD": {
+            "method": "blacklist",
+            "engine_name": "McAfeeD",
+            "engine_version": "1.2.0.10275",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "SentinelOne": {
+            "method": "blacklist",
+            "engine_name": "SentinelOne",
+            "engine_version": "25.1.1.1",
+            "engine_update": "20250114",
+            "category": "undetected",
+            "result": null
+          },
+          "Trapmine": {
+            "method": "blacklist",
+            "engine_name": "Trapmine",
+            "engine_version": "4.0.4.0",
+            "engine_update": "20250515",
+            "category": "undetected",
+            "result": null
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Sophos": {
+            "method": "blacklist",
+            "engine_name": "Sophos",
+            "engine_version": "3.0.3.0",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Ikarus": {
+            "method": "blacklist",
+            "engine_name": "Ikarus",
+            "engine_version": "6.4.16.0",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "GData": {
+            "method": "blacklist",
+            "engine_name": "GData",
+            "engine_version": "GD:27.40556AVA:64.29283",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Jiangmin": {
+            "method": "blacklist",
+            "engine_name": "Jiangmin",
+            "engine_version": "16.0.100",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "Webroot": {
+            "method": "blacklist",
+            "engine_name": "Webroot",
+            "engine_version": "1.10.0.2",
+            "engine_update": "20250227",
+            "category": "undetected",
+            "result": null
+          },
+          "Varist": {
+            "method": "blacklist",
+            "engine_name": "Varist",
+            "engine_version": "6.6.1.3",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Avira": {
+            "method": "blacklist",
+            "engine_name": "Avira",
+            "engine_version": "8.3.3.20",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Antiy-AVL": {
+            "method": "blacklist",
+            "engine_name": "Antiy-AVL",
+            "engine_version": "3.0",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Kingsoft": {
+            "method": "blacklist",
+            "engine_name": "Kingsoft",
+            "engine_version": "None",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "Gridinsoft": {
+            "method": "blacklist",
+            "engine_name": "Gridinsoft",
+            "engine_version": "1.0.217.174",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Xcitium": {
+            "method": "blacklist",
+            "engine_name": "Xcitium",
+            "engine_version": "37774",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "Arcabit": {
+            "method": "blacklist",
+            "engine_name": "Arcabit",
+            "engine_version": "2022.0.0.18",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "ViRobot": {
+            "method": "blacklist",
+            "engine_name": "ViRobot",
+            "engine_version": "2014.3.20.0",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "ZoneAlarm": {
+            "method": "blacklist",
+            "engine_name": "ZoneAlarm",
+            "engine_version": "6.16-103871079",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Microsoft": {
+            "method": "blacklist",
+            "engine_name": "Microsoft",
+            "engine_version": "1.1.25040.1",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Cynet": {
+            "method": "blacklist",
+            "engine_name": "Cynet",
+            "engine_version": "4.0.3.4",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "AhnLab-V3": {
+            "method": "blacklist",
+            "engine_name": "AhnLab-V3",
+            "engine_version": "3.27.2.10550",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "engine_version": "1.2.0.121",
+            "engine_update": "20240328",
+            "category": "undetected",
+            "result": null
+          },
+          "VBA32": {
+            "method": "blacklist",
+            "engine_name": "VBA32",
+            "engine_version": "5.3.2",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "TACHYON": {
+            "method": "blacklist",
+            "engine_name": "TACHYON",
+            "engine_version": "2025-06-03.01",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Panda": {
+            "method": "blacklist",
+            "engine_name": "Panda",
+            "engine_version": "4.6.4.2",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "Zoner": {
+            "method": "blacklist",
+            "engine_name": "Zoner",
+            "engine_version": "2.2.2.0",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Rising": {
+            "method": "blacklist",
+            "engine_name": "Rising",
+            "engine_version": "25.0.0.28",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Yandex": {
+            "method": "blacklist",
+            "engine_name": "Yandex",
+            "engine_version": "5.5.2.24",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "TrellixENS": {
+            "method": "blacklist",
+            "engine_name": "TrellixENS",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "huorong": {
+            "method": "blacklist",
+            "engine_name": "huorong",
+            "engine_version": "37a3dcf:37a3dcf:fe45ca5:fe45ca5",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "MaxSecure": {
+            "method": "blacklist",
+            "engine_name": "MaxSecure",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "Fortinet": {
+            "method": "blacklist",
+            "engine_name": "Fortinet",
+            "engine_version": "7.0.30.0",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "DeepInstinct": {
+            "method": "blacklist",
+            "engine_name": "DeepInstinct",
+            "engine_version": "5.0.0.8",
+            "engine_update": "20250602",
+            "category": "undetected",
+            "result": null
+          },
+          "alibabacloud": {
+            "method": "blacklist",
+            "engine_name": "alibabacloud",
+            "engine_version": "2.2.0",
+            "engine_update": "20250321",
+            "category": "undetected",
+            "result": null
+          },
+          "google_safebrowsing": {
+            "method": "blacklist",
+            "engine_name": "google_safebrowsing",
+            "engine_version": "1.0",
+            "engine_update": "20250603",
+            "category": "undetected",
+            "result": null
+          },
+          "Trustlook": {
+            "method": "blacklist",
+            "engine_name": "Trustlook",
+            "engine_version": "1.0",
+            "engine_update": "20250603",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SymantecMobileInsight": {
+            "method": "blacklist",
+            "engine_name": "SymantecMobileInsight",
+            "engine_version": "2.0",
+            "engine_update": "20250124",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "BitDefenderFalx": {
+            "method": "blacklist",
+            "engine_name": "BitDefenderFalx",
+            "engine_version": "2.0.936",
+            "engine_update": "20250416",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Avast-Mobile": {
+            "method": "blacklist",
+            "engine_name": "Avast-Mobile",
+            "engine_version": "250601-00",
+            "engine_update": "20250601",
+            "category": "type-unsupported",
+            "result": null
+          }
+        },
+        "available_tools": [
+          "capa"
+        ],
+        "type_description": "Win32 EXE",
+        "last_analysis_stats": {
+          "malicious": 0,
+          "suspicious": 0,
+          "undetected": 73,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "last_submission_date": 1745907683,
+        "ssdeep": "768:8Al/LA/0MNxF8XQy6w7CZzvTTsJ1HaQ13iPmbLuZX7oH3ag9zIIlb:IoXp1ibO1Hag7u7oHTzIe",
+        "tlsh": "T1B6339D92675420E2CD9F98B4D2EA8A13BCB572510B3140DF15A4C4590E7B7D2BF3C6AF",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 0
+        },
+        "vhash": "054086655d15166665151iz25xz",
+        "authentihash": "e7febdf2c3ff4b3c977be8abdab00183573153abb60b15243fdb93c80b047807",
+        "reputation": 0,
+        "size": 50144,
+        "magic": "PE32+ executable (native) x86-64, for MS Windows",
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "first_submission_date": 1745907683,
+        "signature_info": {
+          "product": "GTB Endpoint Protector",
+          "verified": "Signed",
+          "description": "GTB MTP-filter driver",
+          "file version": "15,20,0,42590",
+          "signing date": "11:58 AM 10/05/2024",
+          "x509": [
+            {
+              "valid usage": "Code Signing",
+              "thumbprint_sha256": "7DB9F7402A523DD338663B33D55AAD0DD08CB67E687DF0D4D98E7C5FCA27EFD1",
+              "name": "Sectigo Public Code Signing Root R46",
+              "algorithm": "sha384RSA",
+              "thumbprint_md5": "2AA320982E00193FAD3BD0EA5406E4CD",
+              "valid from": "2021-05-25 00:00:00",
+              "valid to": "2028-12-31 23:59:59",
+              "serial number": "48 FC 93 B4 60 55 94 8D 36 A7 C9 8A 89 D6 94 16",
+              "cert issuer": "AAA Certificate Services",
+              "thumbprint": "329B78A5C9EBC2043242DE90CE1B7C6B1BA6C692"
+            },
+            {
+              "valid usage": "Code Signing",
+              "thumbprint_sha256": "384E9F98355A133565EB03083B79E71A46F00C21352ED7C06990D841228CBE88",
+              "name": "Sectigo Public Code Signing CA EV R36",
+              "algorithm": "sha384RSA",
+              "thumbprint_md5": "D386D4056A495DD632C4C9C8BE857406",
+              "valid from": "2021-03-22 00:00:00",
+              "valid to": "2036-03-21 23:59:59",
+              "serial number": "33 D7 08 A8 91 40 53 19 E2 A5 BB D3 39 B9 AD 6E",
+              "cert issuer": "Sectigo Public Code Signing Root R46",
+              "thumbprint": "0185FF9961FF0AA2E431817948C28E83D3F3EC70"
+            },
+            {
+              "valid usage": "Code Signing",
+              "thumbprint_sha256": "49B2E463DA6BB73240B938AEDEBFBD593C091110043C84F9F35E67214DCF1D77",
+              "name": "GTB Technologies, Inc.",
+              "algorithm": "sha256RSA",
+              "thumbprint_md5": "2E07477E0D5EEB23A3B294B5CCBB6A92",
+              "valid from": "2023-10-27 00:00:00",
+              "valid to": "2026-10-26 23:59:59",
+              "serial number": "34 F8 08 AD 56 22 33 99 EA A5 6D 9E 36 BD 3A 22",
+              "cert issuer": "Sectigo Public Code Signing CA EV R36",
+              "thumbprint": "54416A2A697AE8C3A3687387921A17B6D0F55438"
+            },
+            {
+              "valid usage": "ff",
+              "thumbprint_sha256": "628F3382FBC41070C3F68DD0E1836CDE5027AFF295F39FFB1D587DD3E0B949B7",
+              "name": "Sectigo Public Time Stamping Signer R35",
+              "algorithm": "sha384RSA",
+              "thumbprint_md5": "47F252BAADF9B3993A6E34F2E258EA4A",
+              "valid from": "2024-01-15 00:00:00",
+              "valid to": "2035-04-14 23:59:59",
+              "serial number": "3A 52 6A 2C 84 CE 55 E6 1D 65 FC CC 12 D8 E9 89",
+              "cert issuer": "Sectigo Public Time Stamping CA R36",
+              "thumbprint": "F8609819A6FB882CF7E85297F2A119521A16775F"
+            },
+            {
+              "valid usage": "Timestamp Signing",
+              "thumbprint_sha256": "F74D68FAC08AE231D4A25825B193E51B9FFC494FB321818F1F11535E4F976961",
+              "name": "Sectigo Public Time Stamping CA R36",
+              "algorithm": "sha384RSA",
+              "thumbprint_md5": "F1A3BD346A5790E07371275A733F15B6",
+              "valid from": "2021-03-22 00:00:00",
+              "valid to": "2036-03-21 23:59:59",
+              "serial number": "7A 23 AE DA 53 69 96 0F 91 C8 3E 5C F4 C7 E3 3F",
+              "cert issuer": "Sectigo Public Time Stamping Root R46",
+              "thumbprint": "C6AE54E47886F17C3D5512488C69C34A7AF9C2DD"
+            },
+            {
+              "valid usage": "Timestamp Signing",
+              "thumbprint_sha256": "B53AC15CC1AFB6E2AC06828F555BB3BF5BAD8B2BAC1733CE4CB7AAFE729356DE",
+              "name": "Sectigo Public Time Stamping Root R46",
+              "algorithm": "sha384RSA",
+              "thumbprint_md5": "B139A3164C756B1697E53D00C6C788BB",
+              "valid from": "2021-03-22 00:00:00",
+              "valid to": "2038-01-18 23:59:59",
+              "serial number": "36 C2 B0 BD 7C 1B 3A E7 A3 B3 DD 36 CB C9 75 68",
+              "cert issuer": "USERTrust RSA Certification Authority",
+              "thumbprint": "853D632D938282617CD09035C491DE92C142DAC7"
+            },
+            {
+              "valid usage": "0.4.1.311.10.3, 0.4.1.311.10.3, Code Signing",
+              "thumbprint_sha256": "91C691270F2C5B97988F155EB9DED60144F92107E69E00CA8AEF2F08550F1B92",
+              "name": "Microsoft Windows Hardware Compatibility Publisher",
+              "algorithm": "sha256RSA",
+              "thumbprint_md5": "94C043541A88E79B196126B592286F83",
+              "valid from": "2024-01-11 20:09:15",
+              "valid to": "2025-01-10 20:09:15",
+              "serial number": "33 00 00 00 69 9D 42 C9 76 75 B5 08 82 00 00 00 00 00 69",
+              "cert issuer": "Microsoft Windows Third Party Component CA 2014",
+              "thumbprint": "6C582870828074ABF44AA0D61070E04036D9115B"
+            },
+            {
+              "thumbprint_sha256": "A0F259A07039908EEB943E223FDF996E5E1E131D9AA6A602FF4672F7B9298AEE",
+              "name": "Microsoft Windows Third Party Component CA 2014",
+              "algorithm": "sha256RSA",
+              "thumbprint_md5": "DCFA56508DFF120D936DD627F38CA2F9",
+              "valid from": "2014-10-15 20:31:27",
+              "valid to": "2029-10-15 20:41:27",
+              "serial number": "33 00 00 00 0D 69 0D 5D 78 93 D0 76 DF 00 00 00 00 00 0D",
+              "cert issuer": "Microsoft Root Certificate Authority 2010",
+              "thumbprint": "1906DCF62629B563252C826FDD874EFCEB6856C6"
+            },
+            {
+              "valid usage": "ff",
+              "thumbprint_sha256": "1185CCDDFC53C89F18D1F769B684F5AA73EBC6386D7EFC8D16B640ACB7287479",
+              "name": "Microsoft Time-Stamp Service",
+              "algorithm": "sha256RSA",
+              "thumbprint_md5": "BED89E26CB14954BD1FDF492B358C918",
+              "valid from": "2024-07-25 18:31:18",
+              "valid to": "2025-10-22 18:31:18",
+              "serial number": "33 00 00 01 FE D0 A8 C2 7B 34 21 0B 01 00 01 00 00 01 FE",
+              "cert issuer": "Microsoft Time-Stamp PCA 2010",
+              "thumbprint": "8463470FF6BB4346D02D6546F49B86C602D15EC7"
+            },
+            {
+              "valid usage": "Timestamp Signing",
+              "thumbprint_sha256": "EBEC1EDD9E140D9C105CC62B15A915C5443DDC514A35E5773C09AFB0274C7BA5",
+              "name": "Microsoft Time-Stamp PCA 2010",
+              "algorithm": "sha256RSA",
+              "thumbprint_md5": "F8000EF37A54CE55A45F632293786351",
+              "valid from": "2021-09-30 18:22:25",
+              "valid to": "2030-09-30 18:32:25",
+              "serial number": "33 00 00 00 15 C5 E7 6B 9E 02 9B 49 99 00 00 00 00 00 15",
+              "cert issuer": "Microsoft Root Certificate Authority 2010",
+              "thumbprint": "36056A5662DCADECF82CC14C8B80EC5E0BCC59A6"
+            }
+          ],
+          "original name": "GTBMtpFilter.sys",
+          "signers": "GTB Technologies, Inc.; Sectigo Public Code Signing CA EV R36; Sectigo Public Code Signing Root R46; Sectigo (AAA)",
+          "counter signers details": [
+            {
+              "status": "Valid",
+              "valid usage": "Timestamp Signing",
+              "name": "Sectigo Public Time Stamping Signer R35",
+              "algorithm": "sha384RSA",
+              "valid from": "12:00 AM 01/15/2024",
+              "valid to": "11:59 PM 04/14/2035",
+              "serial number": "3A 52 6A 2C 84 CE 55 E6 1D 65 FC CC 12 D8 E9 89",
+              "cert issuer": "Sectigo Public Time Stamping CA R36",
+              "thumbprint": "F8609819A6FB882CF7E85297F2A119521A16775F"
+            },
+            {
+              "status": "Valid",
+              "valid usage": "Timestamp Signing",
+              "name": "Sectigo Public Time Stamping CA R36",
+              "algorithm": "sha384RSA",
+              "valid from": "12:00 AM 03/22/2021",
+              "valid to": "11:59 PM 03/21/2036",
+              "serial number": "7A 23 AE DA 53 69 96 0F 91 C8 3E 5C F4 C7 E3 3F",
+              "cert issuer": "Sectigo Public Time Stamping Root R46",
+              "thumbprint": "C6AE54E47886F17C3D5512488C69C34A7AF9C2DD"
+            },
+            {
+              "status": "Valid",
+              "valid usage": "Timestamp Signing",
+              "name": "Sectigo Public Time Stamping Root R46",
+              "algorithm": "sha384RSA",
+              "valid from": "12:00 AM 03/22/2021",
+              "valid to": "11:59 PM 03/21/2046",
+              "serial number": "78 3D 05 6C FA 83 2E 7E 69 F8 56 22 76 9F 02 B9",
+              "cert issuer": "Sectigo Public Time Stamping Root R46",
+              "thumbprint": "52421AEAC424C2435E7F5355A30437A3B1745879"
+            }
+          ],
+          "counter signers": "Sectigo Public Time Stamping Signer R35; Sectigo Public Time Stamping CA R36; Sectigo Public Time Stamping Root R46",
+          "internal name": "GTBMtpFilter.sys",
+          "copyright": "\u00a9 Copyright 2004-2021, GTB Technologies, Inc. All Rights Reserved.",
+          "signers details": [
+            {
+              "status": "Valid",
+              "valid usage": "Code Signing",
+              "name": "GTB Technologies, Inc.",
+              "algorithm": "sha256RSA",
+              "valid from": "12:00 AM 10/27/2023",
+              "valid to": "11:59 PM 10/26/2026",
+              "serial number": "34 F8 08 AD 56 22 33 99 EA A5 6D 9E 36 BD 3A 22",
+              "cert issuer": "Sectigo Public Code Signing CA EV R36",
+              "thumbprint": "54416A2A697AE8C3A3687387921A17B6D0F55438"
+            },
+            {
+              "status": "Valid",
+              "valid usage": "Code Signing",
+              "name": "Sectigo Public Code Signing CA EV R36",
+              "algorithm": "sha384RSA",
+              "valid from": "12:00 AM 03/22/2021",
+              "valid to": "11:59 PM 03/21/2036",
+              "serial number": "33 D7 08 A8 91 40 53 19 E2 A5 BB D3 39 B9 AD 6E",
+              "cert issuer": "Sectigo Public Code Signing Root R46",
+              "thumbprint": "0185FF9961FF0AA2E431817948C28E83D3F3EC70"
+            },
+            {
+              "status": "Valid",
+              "valid usage": "Code Signing",
+              "name": "Sectigo Public Code Signing Root R46",
+              "algorithm": "sha384RSA",
+              "valid from": "12:00 AM 05/25/2021",
+              "valid to": "11:59 PM 12/31/2028",
+              "serial number": "48 FC 93 B4 60 55 94 8D 36 A7 C9 8A 89 D6 94 16",
+              "cert issuer": "AAA Certificate Services",
+              "thumbprint": "329B78A5C9EBC2043242DE90CE1B7C6B1BA6C692"
+            },
+            {
+              "status": "Valid",
+              "valid usage": "Client Auth, Code Signing, EFS, Email Protection, IPSEC Tunnel, IPSEC User, Server Auth, Timestamp Signing",
+              "name": "Sectigo (AAA)",
+              "algorithm": "sha1RSA",
+              "valid from": "12:00 AM 01/01/2004",
+              "valid to": "11:59 PM 12/31/2028",
+              "serial number": "01",
+              "cert issuer": "AAA Certificate Services",
+              "thumbprint": "D1EB23A46D17D68FD92564C2F1F1601764D8E349"
+            }
+          ],
+          "pkcs7": {
+            "opusinfo": [
+              {
+                "moreInfo": "https://www.microsoft.com/en-us/windows ",
+                "programName": "GTB Technologies, Inc"
+              }
+            ]
+          }
+        },
+        "downloadable": true,
+        "filecondis": {
+          "raw_md5": "81dce8a1a02bffa10bd4bde5c544b680",
+          "dhash": "787c7c5c0c190000"
+        },
+        "magika": "PEBIN",
+        "exiftool": {
+          "UninitializedDataSize": "0",
+          "InitializedDataSize": "8704",
+          "ImageVersion": "10.0",
+          "ProductName": "GTB Endpoint Protector",
+          "FileVersionNumber": "15.20.0.42590",
+          "LanguageCode": "Unknown (0009)",
+          "FileFlagsMask": "0x0017",
+          "FileDescription": "GTB MTP-filter driver",
+          "ImageFileCharacteristics": "Executable, Large address aware",
+          "CharacterSet": "Unicode",
+          "LinkerVersion": "14.41",
+          "EntryPoint": "0x1810",
+          "MIMEType": "application/octet-stream",
+          "LegalCopyright": "\u00a9 Copyright 2004-2021, GTB Technologies, Inc. All Rights Reserved.",
+          "FileVersion": "15,20,0,42590",
+          "TimeStamp": "2024:10:05 08:17:40+00:00",
+          "FileType": "Win64 EXE",
+          "PEType": "PE32+",
+          "InternalName": "GTBMtpFilter.sys",
+          "ProductVersion": "15,20,0",
+          "SubsystemVersion": "10.0",
+          "OSVersion": "10.0",
+          "FileOS": "Windows NT 32-bit",
+          "Subsystem": "Native",
+          "MachineType": "AMD AMD64",
+          "CompanyName": "GTB Technologies, Inc.",
+          "CodeSize": "18944",
+          "FileSubtype": "7",
+          "ProductVersionNumber": "15.20.0.0",
+          "FileTypeExtension": "exe",
+          "ObjectFileType": "Driver",
+          "OriginalFileName": "GTBMtpFilter.sys",
+          "Revision": "c589707431"
+        },
+        "detectiteasy": {
+          "filetype": "PE64",
+          "values": [
+            {
+              "info": "C",
+              "version": "19.36.34120",
+              "type": "Compiler",
+              "name": "Microsoft Visual C/C++"
+            },
+            {
+              "version": "14.36.34120",
+              "type": "Linker",
+              "name": "Microsoft Linker"
+            },
+            {
+              "version": "2022 version 17.6",
+              "type": "Tool",
+              "name": "Visual Studio"
+            },
+            {
+              "info": "PKCS #7",
+              "version": "2.0",
+              "type": "Sign tool",
+              "name": "Windows Authenticode"
+            }
+          ]
+        },
+        "times_submitted": 1,
+        "tags": [
+          "signed",
+          "64bits",
+          "peexe",
+          "overlay",
+          "native"
+        ],
+        "type_tag": "peexe",
+        "unique_sources": 1,
+        "trid": [
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 56.5
+          },
+          {
+            "file_type": "Windows Icons Library (generic)",
+            "probability": 11.0
+          },
+          {
+            "file_type": "OS/2 Executable (generic)",
+            "probability": 10.9
+          },
+          {
+            "file_type": "Generic Win/DOS Executable",
+            "probability": 10.7
+          },
+          {
+            "file_type": "DOS Executable Generic",
+            "probability": 10.7
+          }
+        ],
+        "meaningful_name": "GTBMtpFilter.sys",
+        "last_analysis_date": 1748932755,
+        "names": [
+          "GTBMtpFilter.sys",
+          "c:\\windows\\system32\\gtbmtpfilter_42670_0.sys"
+        ],
+        "creation_date": 1728116260,
+        "last_modification_date": 1748939987,
+        "threat_severity": {
+          "version": 5,
+          "threat_severity_level": "SEVERITY_NONE",
+          "threat_severity_data": {},
+          "last_analysis_date": "1745907720",
+          "level_description": "No severity score data"
+        }
+      }
+    }
+  }
+}

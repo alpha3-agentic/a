@@ -1,0 +1,74 @@
+{
+  "found": true,
+  "status": 200,
+  "endpoint": "GET file/sha256",
+  "summary": {
+    "risk": {
+      "malicious_score": 100,
+      "detected_activities": [
+        {
+          "type": "malware",
+          "observation_date": "2025-09-12T17:16:59.918652Z",
+          "description": "",
+          "confidence": 100,
+          "occurrences_count": 1,
+          "related_entities": null
+        },
+        {
+          "type": "malware_payload",
+          "observation_date": "2025-08-30T05:16:35Z",
+          "description": "Detected in 2 source(s). Recognized as Application.Generic.3785251.",
+          "confidence": 80,
+          "occurrences_count": 2,
+          "related_entities": null
+        }
+      ],
+      "occurrences_count": 3
+    },
+    "severity": null,
+    "classification": null,
+    "matches": [
+      "df43e66ae4d365cb5607038c6a64fa651769e481f10f9871996d60a5af562a40"
+    ]
+  },
+  "json": {
+    "data": {
+      "entity": {
+        "type": "file/sha256",
+        "value": "df43e66ae4d365cb5607038c6a64fa651769e481f10f9871996d60a5af562a40"
+      },
+      "risk": {
+        "malicious_score": 100,
+        "detected_activities": [
+          {
+            "type": "malware",
+            "observation_date": "2025-09-12T17:16:59.918652Z",
+            "description": "",
+            "confidence": 100,
+            "occurrences_count": 1,
+            "related_entities": null
+          },
+          {
+            "type": "malware_payload",
+            "observation_date": "2025-08-30T05:16:35Z",
+            "description": "Detected in 2 source(s). Recognized as Application.Generic.3785251.",
+            "confidence": 80,
+            "occurrences_count": 2,
+            "related_entities": null
+          }
+        ],
+        "occurrences_count": 3
+      },
+      "enrichment": {
+        "related_entities": null,
+        "filenames": [
+          "/home/petik/ss/malware/2025-08-30_e958faf7fea6afb3df4136ae6ef6c75b_black-basta_ezcob_njrat_vidar_xmrig",
+          "C:\\Windows\\2l28hgdrb.exe"
+        ],
+        "first_seen": "2025-08-25T08:25:18Z",
+        "download_urls": []
+      },
+      "benign": false
+    }
+  }
+}
