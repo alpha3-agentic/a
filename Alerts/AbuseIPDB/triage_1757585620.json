@@ -1,9 +1,0 @@
-{
-  "alert_file": "triage_1757585620.json",
-  "ip_checked": null,
-  "result": {
-    "found": false,
-    "error": "no_ip",
-    "message": "No IP address found in alert (checked 'src' and 'dst' fields)"
-  }
-}
